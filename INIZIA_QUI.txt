@@ -1,0 +1,128 @@
+================================================================================
+🏗️  SISTEMA METEO E SICUREZZA CANTIERE - Regione Liguria
+================================================================================
+
+👋 BENVENUTO! Inizia da qui per riprendere il lavoro.
+
+================================================================================
+📂 FILE IMPORTANTI DA LEGGERE (IN ORDINE)
+================================================================================
+
+1. STATO_PROGETTO.md
+   📌 Cosa è stato fatto, cosa manca, panoramica generale
+   ⏱️  Tempo lettura: 5 minuti
+
+2. PROSSIMI_PASSI.md
+   📌 Checklist operativa passo-passo
+   ⏱️  Tempo lettura: 3 minuti
+
+3. GUIDA_RAPIDA.md
+   📌 Guida pratica in italiano
+   ⏱️  Tempo lettura: 10 minuti
+
+4. README.md
+   📌 Documentazione tecnica completa
+   ⏱️  Tempo lettura: 15 minuti
+
+================================================================================
+🚀 SETUP VELOCE (3 MINUTI)
+================================================================================
+
+Windows:
+  1. Doppio click su: setup_rapido.bat
+  2. Segui le istruzioni a schermo
+
+Linux/Mac:
+  1. Apri Terminale nella cartella del progetto
+  2. Esegui: ./setup_rapido.sh
+  3. Segui le istruzioni a schermo
+
+Manuale:
+  1. pip install pandas numpy
+  2. python test_analyzer.py
+
+================================================================================
+✅ COSA HAI GIÀ
+================================================================================
+
+✓ 250 stazioni meteo Liguria (Genova, Imperia, La Spezia, Savona)
+✓ Algoritmo sicurezza cantiere funzionante e testato
+✓ Script per analisi automatiche
+✓ Configurazione soglie personalizzabile
+✓ Documentazione completa in italiano
+
+================================================================================
+⏳ COSA MANCA (OPZIONALE)
+================================================================================
+
+□ Verificare ID stazioni dal sito web
+□ Configurare scraper per download automatico
+□ Personalizzare soglie sicurezza per il tuo cantiere
+
+Dettagli in: PROSSIMI_PASSI.md
+
+================================================================================
+🎯 COMANDI RAPIDI
+================================================================================
+
+Test sistema:
+  python test_analyzer.py
+
+Menu interattivo:
+  python demo.py
+
+Mostra stazioni disponibili:
+  python demo.py stations
+
+Mostra criteri di sicurezza:
+  python demo.py criteria
+
+Analizza un giorno (esempio):
+  python main.py --date 2024-01-15 --station GE036 \
+    --station-name "GENOVA" --skip-download \
+    --data-file data/esempio_dati_meteo.csv
+
+================================================================================
+📊 COSA FA IL SISTEMA
+================================================================================
+
+Analizza dati meteo e ti dice se puoi lavorare in cantiere:
+
+INPUT:  Dati meteo di un giorno (temperatura, vento, pioggia, etc.)
+OUTPUT: Report con:
+        • Score sicurezza 0-100
+        • Categoria (OTTIMO, BUONO, ACCETTABILE, VIETATO, etc.)
+        • Avvisi specifici (vento forte, pioggia, gelo, etc.)
+        • Idoneità per tipo lavoro (scavi, opere in quota, getti, etc.)
+
+Basato su:
+  - D.Lgs 81/2008 (Sicurezza Lavoro)
+  - Norme Tecniche Costruzioni NTC 2018
+  - Best practices ingegneristiche
+
+================================================================================
+❓ HAI PROBLEMI?
+================================================================================
+
+1. Leggi: PROSSIMI_PASSI.md sezione "Problemi Comuni"
+2. Verifica di avere Python installato: python --version
+3. Verifica dipendenze: pip install pandas numpy
+4. Testa il sistema: python test_analyzer.py
+
+================================================================================
+📞 SUPPORTO
+================================================================================
+
+Repository GitHub: https://github.com/sinmar123/app33-meteo
+Branch: claude/weather-scraper-worksite-safety-01MDSiDDhdNkbjTu7j3kcahh
+
+File di aiuto:
+  • STATO_PROGETTO.md - Panoramica
+  • PROSSIMI_PASSI.md - Checklist
+  • GUIDA_RAPIDA.md - Istruzioni dettagliate
+
+================================================================================
+
+🎉 INIZIA LEGGENDO: STATO_PROGETTO.md
+
+================================================================================
