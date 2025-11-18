@@ -56,3 +56,7 @@ secrets.json
 *.tmp
 *.bak
 *.cache
+cookies.txt
+page*.html
+page_screenshot.png
+*.html
