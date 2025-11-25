@@ -20,7 +20,37 @@ for /f "tokens=*" %%i in ('python --version') do set PYTHON_VERSION=%%i
 echo ✅ Python trovato: %PYTHON_VERSION%
 echo.
 
-REM Controlla streamlit
+REM Crea ambiente virtuale se non esiste
+if not exist "venv" (
+    echo 📦 Creazione ambiente virtuale (prima volta^)...
+    python -m venv venv
+
+    if %errorlevel% equ 0 (
+        echo ✅ Ambiente virtuale creato!
+    ) else (
+        echo ❌ Errore creazione ambiente virtuale
+        echo.
+        echo Prova manualmente:
+        echo   python -m venv venv
+        pause
+        exit /b 1
+    )
+    echo.
+)
+
+REM Attiva ambiente virtuale
+echo 🔧 Attivazione ambiente virtuale...
+if exist "venv\Scripts\activate.bat" (
+    call venv\Scripts\activate.bat
+    echo ✅ Ambiente virtuale attivo
+) else (
+    echo ❌ Impossibile trovare script di attivazione venv
+    pause
+    exit /b 1
+)
+echo.
+
+REM Controlla streamlit nell'ambiente virtuale
 echo 📦 Controllo dipendenze...
 python -c "import streamlit" >nul 2>&1
 if %errorlevel% equ 0 (
@@ -29,12 +59,14 @@ if %errorlevel% equ 0 (
     echo 📥 Installazione dipendenze in corso...
     echo    (potrebbe richiedere 1-2 minuti la prima volta^)
     echo.
-    pip install streamlit pandas numpy plotly python-dateutil -q
+    pip install streamlit pandas numpy plotly python-dateutil
 
     if %errorlevel% equ 0 (
+        echo.
         echo ✅ Dipendenze installate con successo!
     ) else (
-        echo ⚠️  Possibili warning (normale^)
+        echo.
+        echo ⚠️  Installazione completata con warning (potrebbe essere normale^)
     )
 )
 

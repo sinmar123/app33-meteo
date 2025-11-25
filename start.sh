@@ -1,5 +1,5 @@
 #!/bin/bash
-# 🚀 Avvio APP Meteo Cantiere - Linux/Mac
+# 🚀 Avvio APP Meteo Cantiere - Linux/Mac/MSYS2
 
 echo "========================================================================"
 echo "🏗️  AVVIO APP METEO CANTIERE"
@@ -9,10 +9,8 @@ echo ""
 # Verifica Python
 if command -v python3 &> /dev/null; then
     PYTHON_CMD="python3"
-    PIP_CMD="pip3"
 elif command -v python &> /dev/null; then
     PYTHON_CMD="python"
-    PIP_CMD="pip"
 else
     echo "❌ Python non installato!"
     echo "Installa Python da: https://www.python.org/downloads/"
@@ -22,20 +20,53 @@ fi
 echo "✅ Python trovato: $($PYTHON_CMD --version)"
 echo ""
 
-# Controlla se streamlit è installato
+# Crea ambiente virtuale se non esiste
+if [ ! -d "venv" ]; then
+    echo "📦 Creazione ambiente virtuale (prima volta)..."
+    $PYTHON_CMD -m venv venv
+
+    if [ $? -eq 0 ]; then
+        echo "✅ Ambiente virtuale creato!"
+    else
+        echo "❌ Errore creazione ambiente virtuale"
+        echo ""
+        echo "Prova manualmente:"
+        echo "  $PYTHON_CMD -m venv venv"
+        exit 1
+    fi
+    echo ""
+fi
+
+# Attiva ambiente virtuale
+echo "🔧 Attivazione ambiente virtuale..."
+if [ -f "venv/bin/activate" ]; then
+    source venv/bin/activate
+elif [ -f "venv/Scripts/activate" ]; then
+    source venv/Scripts/activate
+else
+    echo "❌ Impossibile trovare script di attivazione venv"
+    exit 1
+fi
+
+echo "✅ Ambiente virtuale attivo"
+echo ""
+
+# Controlla se streamlit è installato nell'ambiente virtuale
 echo "📦 Controllo dipendenze..."
-if $PYTHON_CMD -c "import streamlit" 2>/dev/null; then
+if python -c "import streamlit" 2>/dev/null; then
     echo "✅ Streamlit già installato"
 else
     echo "📥 Installazione dipendenze in corso..."
     echo "   (potrebbe richiedere 1-2 minuti la prima volta)"
     echo ""
-    $PIP_CMD install streamlit pandas numpy plotly python-dateutil -q
+    pip install streamlit pandas numpy plotly python-dateutil
 
     if [ $? -eq 0 ]; then
+        echo ""
         echo "✅ Dipendenze installate con successo!"
     else
-        echo "⚠️  Possibili warning (normale)"
+        echo ""
+        echo "⚠️  Installazione completata con warning (potrebbe essere normale)"
     fi
 fi
 
@@ -52,4 +83,4 @@ echo "========================================================================"
 echo ""
 
 # Avvia Streamlit
-$PYTHON_CMD -m streamlit run app.py --server.headless true
+python -m streamlit run app.py --server.headless true
