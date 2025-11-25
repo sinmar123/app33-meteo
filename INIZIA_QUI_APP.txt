@@ -1,0 +1,200 @@
+╔══════════════════════════════════════════════════════════════════════════╗
+║                                                                          ║
+║   🏗️  APP METEO CANTIERE - REGIONE LIGURIA                              ║
+║                                                                          ║
+║   📱 APPLICAZIONE WEB CON INTERFACCIA GRAFICA                           ║
+║   🚀 PRONTA ALL'USO - ZERO CONFIGURAZIONE                               ║
+║                                                                          ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+
+╔══════════════════════════════════════════════════════════════════════════╗
+║  ⚡ AVVIO VELOCE (2 CLICK!)                                              ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+   Windows:
+   ────────────────────────────────────────────────────────
+   1. Doppio click su →  start.bat
+   2. Aspetta che si apra il browser
+   3. FATTO! 🎉
+
+
+   Mac / Linux:
+   ────────────────────────────────────────────────────────
+   1. Doppio click su →  start.sh
+   2. Aspetta che si apra il browser
+   3. FATTO! 🎉
+
+
+   L'app si apre automaticamente su:  http://localhost:8501
+
+   Se non si apre automaticamente, apri il browser e vai su quell'indirizzo.
+
+
+╔══════════════════════════════════════════════════════════════════════════╗
+║  🎯 COSA VEDRAI                                                          ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+   Un'applicazione web professionale nel tuo browser con:
+
+   📍 Menu selezione stazione (250 stazioni Liguria)
+   📅 Calendario per scegliere la data
+   📁 Upload file dati meteo (o usa esempio)
+   🔍 Pulsante "ANALIZZA" grande e chiaro
+
+   📊 RISULTATI AUTOMATICI:
+   ├─ Score sicurezza con grafico circolare colorato
+   ├─ Categoria (OTTIMO, BUONO, ACCETTABILE, VIETATO)
+   ├─ ✅/❌ Si può lavorare in cantiere?
+   ├─ Grafici a barre per ogni parametro meteo
+   ├─ Avvisi e raccomandazioni colorate
+   └─ Idoneità specifica per ogni tipo di lavoro
+
+   💾 Download report in TXT o CSV
+
+
+╔══════════════════════════════════════════════════════════════════════════╗
+║  💡 PRIMO TEST (30 secondi)                                              ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+   1. Doppio click su  start.bat  (Windows) o  start.sh  (Mac/Linux)
+
+   2. Nel browser, lascia spuntato "Usa dati di esempio"
+
+   3. Premi il pulsante blu: 🔍 ANALIZZA SICUREZZA CANTIERE
+
+   4. Guarda i risultati con grafici colorati!
+
+
+╔══════════════════════════════════════════════════════════════════════════╗
+║  🎨 INTERFACCIA SUPER INTUITIVA                                          ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+   ┌─────────────────┐  ┌──────────────────────────────────────┐
+   │ BARRA SINISTRA  │  │ CONTENUTO PRINCIPALE                 │
+   ├─────────────────┤  ├──────────────────────────────────────┤
+   │                 │  │                                      │
+   │ 📍 Stazione     │  │     [🔍 ANALIZZA] ← Grande pulsante │
+   │ 📅 Data         │  │                                      │
+   │ 📁 File CSV     │  │  ┌────────┐   ✅ OTTIMO             │
+   │                 │  │  │  83.5  │   Si può lavorare!      │
+   │ ℹ️ Info         │  │  │  /100  │                         │
+   │                 │  │  └────────┘                         │
+   │                 │  │                                      │
+   └─────────────────┘  │  📊 Grafici colorati                │
+                        │  ⚠️ Avvisi                           │
+                        │  🔨 Idoneità lavori                  │
+                        │  💾 Download report                  │
+                        └──────────────────────────────────────┘
+
+   Tutto con COLORI, ICONE, GRAFICI per capire subito!
+
+
+╔══════════════════════════════════════════════════════════════════════════╗
+║  📚 DOCUMENTAZIONE                                                       ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+   Per NON sviluppatori (TU!):
+   ────────────────────────────────────────────────────────
+   📖 README_APP.txt ................. Istruzioni rapide app
+   📖 GUIDA_SEMPLICISSIMA.md ......... Guida dettagliata con immagini
+   📖 SCREENSHOT_APP.txt ............. Anteprima interfaccia
+
+   Per sviluppatori (solo se serve):
+   ────────────────────────────────────────────────────────
+   📖 STATO_PROGETTO.md .............. Panoramica tecnica
+   📖 PROSSIMI_PASSI.md .............. Checklist sviluppo
+   📖 GUIDA_RAPIDA.md ................ Guida tecnica
+   📖 README.md ...................... Documentazione completa
+
+
+╔══════════════════════════════════════════════════════════════════════════╗
+║  🔧 PROBLEMI?                                                            ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+   "Python non trovato"
+   ────────────────────────────────────────────────────────
+   → Installa Python da: https://www.python.org/downloads/
+   → Su Windows: IMPORTANTE spuntare "Add Python to PATH"!
+
+
+   "Il browser non si apre"
+   ────────────────────────────────────────────────────────
+   → Apri manualmente: http://localhost:8501
+
+
+   "Voglio fermare l'app"
+   ────────────────────────────────────────────────────────
+   → Chiudi la finestra del terminale
+   → Oppure premi Ctrl+C nel terminale
+
+
+   Altri problemi?
+   ────────────────────────────────────────────────────────
+   → Leggi: GUIDA_SEMPLICISSIMA.md
+
+
+╔══════════════════════════════════════════════════════════════════════════╗
+║  ✨ CARATTERISTICHE                                                      ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+   ✅ ZERO linea di comando (tutto nel browser!)
+   ✅ ZERO configurazione necessaria
+   ✅ Interfaccia 100% grafica
+   ✅ Grafici professionali colorati
+   ✅ 250 stazioni meteo Liguria
+   ✅ Analisi automatica in 1 click
+   ✅ Report scaricabili
+   ✅ Adatta per NON sviluppatori
+   ✅ Funziona su Windows, Mac, Linux
+   ✅ Si apre nel tuo browser preferito
+
+
+╔══════════════════════════════════════════════════════════════════════════╗
+║  🎯 COSA FA L'APP                                                        ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+   INPUT:   Dati meteo di un giorno (temperatura, vento, pioggia...)
+
+   OUTPUT:  Report professionale con:
+            • Score sicurezza 0-100 con grafico circolare
+            • Categoria visiva (OTTIMO/BUONO/VIETATO)
+            • ✅/❌ Chiaro se puoi lavorare
+            • Grafici a barre colorate
+            • Avvisi specifici (es: "Vento forte, gru vietate")
+            • Valutazione per OGNI tipo lavoro:
+              - Scavi
+              - Opere in quota
+              - Getti calcestruzzo
+              - Facciate
+              - Coperture
+              - Gru e sollevamenti
+              - Movimenti terra
+              - Lavori interni
+
+
+╔══════════════════════════════════════════════════════════════════════════╗
+║  🚀 RICAPITOLANDO                                                        ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+   PER USARE L'APP BASTANO 2 CLICK:
+
+   1️⃣  Doppio click su  start.bat  (Windows) o  start.sh  (Mac/Linux)
+
+   2️⃣  Click su  🔍 ANALIZZA  nel browser
+
+   FATTO! Vedi il report completo con grafici! 🎉
+
+
+╔══════════════════════════════════════════════════════════════════════════╗
+║                                                                          ║
+║   🎊 INIZIA SUBITO!                                                      ║
+║                                                                          ║
+║   Doppio click su:                                                       ║
+║                                                                          ║
+║   Windows  →  start.bat                                                  ║
+║   Mac/Linux → start.sh                                                   ║
+║                                                                          ║
+║   BUON LAVORO E CANTIERI SICURI! 🏗️⛑️                                   ║
+║                                                                          ║
+╚══════════════════════════════════════════════════════════════════════════╝
