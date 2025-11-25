@@ -1,0 +1,233 @@
+================================================================================
+📸 ANTEPRIMA APP - Meteo Cantiere
+================================================================================
+
+Quando avvii l'app (doppio click su start.bat), vedi questa interfaccia:
+
+================================================================================
+INTERFACCIA PRINCIPALE
+================================================================================
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                                                         │
+│  🏗️ Sistema Meteo e Sicurezza Cantiere                                │
+│  Regione Liguria - Valutazione automatica condizioni lavoro            │
+│                                                                         │
+├─────────────────────────────────────────────────────────────────────────┤
+│                                                                         │
+│  ┌──────────────────┐  ┌────────────────────────────────────────────┐ │
+│  │ ⚙️ Configurazione │  │                                            │ │
+│  ├──────────────────┤  │    🔍 ANALIZZA SICUREZZA CANTIERE         │ │
+│  │                  │  │                                            │ │
+│  │ 📍 Stazione:     │  └────────────────────────────────────────────┘ │
+│  │ [GE036 - GENOVA] │                                                 │
+│  │                  │  ┌────────────────────────────────────────────┐ │
+│  │ 📅 Data:         │  │ 📊 RISULTATI ANALISI                       │ │
+│  │ [18/11/2024]     │  ├────────────────────────────────────────────┤ │
+│  │                  │  │                                            │ │
+│  │ 📁 Dati:         │  │ 📅 Data: 18/11/2024                        │ │
+│  │ ☑️ Usa esempio   │  │ 📍 Stazione: GENOVA                        │ │
+│  │                  │  │                                            │ │
+│  │ ℹ️ Informazioni  │  │ ┌───────────┐    🎯 Valutazione           │ │
+│  │                  │  │ │           │    ✅ OTTIMO                  │ │
+│  └──────────────────┘  │ │   83.5    │    Condizioni ottime         │ │
+│                        │ │  /100     │                               │ │
+│                        │ │           │    ✅ LAVORI CONSENTITI       │ │
+│                        │ └───────────┘                               │ │
+│                        │                                             │ │
+│                        │ 📈 Dettaglio Parametri                      │ │
+│                        │ ┌─────────────────────────────────────────┐ │ │
+│                        │ │ ████████████ Precipitazione  70/100     │ │ │
+│                        │ │ ████████████ Vento           70/100     │ │ │
+│                        │ │ ███████████████ Temperatura 100/100     │ │ │
+│                        │ │ ███████████████ Umidità     100/100     │ │ │
+│                        │ │ ███████████████ Visibilità  100/100     │ │ │
+│                        │ └─────────────────────────────────────────┘ │ │
+│                        │                                             │ │
+│                        │ ⚠️ Avvisi                                   │ │
+│                        │ • Pioggia leggera 0.8 mm/h                  │ │
+│                        │ • Vento moderato 6.8 m/s                    │ │
+│                        │                                             │ │
+│                        │ 🔨 Idoneità Lavori                          │ │
+│                        │ ✅ SCAVI: Condizioni buone                  │ │
+│                        │ ✅ OPERE IN QUOTA: Ottime                   │ │
+│                        │ ✅ GETTO CLS: Ottime                        │ │
+│                        │ ✅ FACCIATE: Ottime                         │ │
+│                        │ ...                                         │ │
+│                        │                                             │ │
+│                        │ 💾 Esporta                                  │ │
+│                        │ [📄 Report TXT] [📊 Dati CSV]              │ │
+│                        └─────────────────────────────────────────────┘ │
+│                                                                         │
+│  🏗️ Sistema Meteo e Sicurezza Cantiere - Regione Liguria              │
+│  Basato su D.Lgs 81/2008 e NTC 2018                                    │
+└─────────────────────────────────────────────────────────────────────────┘
+
+================================================================================
+SEZIONE STAZIONE (Barra Sinistra)
+================================================================================
+
+📍 Seleziona Stazione
+   ┌────────────────────────────────────┐
+   │ GE036 - GENOVA - CENTRO FUNZIONALE ▼│
+   ├────────────────────────────────────┤
+   │ GE001 - ALPE GORRETO               │
+   │ GE002 - ALPE VOBBIA                │
+   │ GE003 - AMBORZASCO                 │
+   │ ...                                 │
+   │ IM001 - AIROLE                     │
+   │ SP001 - AMEGLIA FOCE MAGRA         │
+   │ SV001 - ALASSIO                    │
+   │ ... (250 stazioni totali)          │
+   └────────────────────────────────────┘
+
+================================================================================
+SEZIONE DATA
+================================================================================
+
+📅 Data Analisi
+   ┌────────────────┐
+   │  📅 18/11/2024 │  ← Click per calendario
+   └────────────────┘
+
+================================================================================
+SEZIONE CARICAMENTO DATI
+================================================================================
+
+📁 Carica Dati Meteo
+
+   ☑️ Usa dati di esempio
+   📊 Usando dati di esempio
+
+   OPPURE (togli spunta sopra)
+
+   ☐ Usa dati di esempio
+   ┌─────────────────────────────────────┐
+   │ Trascina il file qui                │
+   │ oppure                              │
+   │ [Sfoglia file...]                   │
+   └─────────────────────────────────────┘
+   Formati accettati: CSV
+
+================================================================================
+GAUGE SCORE (Indicatore Circolare)
+================================================================================
+
+         Score Sicurezza
+
+    ┌──────────────────────┐
+    │                      │
+    │        ╭─────╮        │
+    │      ╱         ╲      │
+    │    ╱             ╲    │
+    │   │      83.5     │   │  🟢 Verde: 80-100 (OTTIMO)
+    │   │     ─────     │   │  🟡 Giallo: 50-79 (ACCETTABILE)
+    │    ╲             ╱    │  🔴 Rosso: 0-49 (CRITICO)
+    │      ╲         ╱      │
+    │        ╰─────╯        │
+    │          ▲            │
+    │                      │
+    └──────────────────────┘
+
+================================================================================
+GRAFICO PARAMETRI (Barre Orizzontali)
+================================================================================
+
+Dettaglio Parametri Meteo
+
+Precipitazione   █████████████░░░░░░░  70/100
+Vento            █████████████░░░░░░░  70/100
+Temperatura      ███████████████████ 100/100
+Umidità          ███████████████████ 100/100
+Visibilità       ███████████████████ 100/100
+
+🟢 = Ottimo (>80)  🟡 = Accettabile (50-80)  🔴 = Critico (<50)
+
+================================================================================
+SEZIONE AVVISI
+================================================================================
+
+⚠️ Avvisi e Raccomandazioni
+
+🚫 CRITICO: Vento 15 m/s - LAVORI IN QUOTA VIETATI
+   (appare in rosso)
+
+⚠️ Attenzione: Pioggia 3.5 mm/h - Limitare lavori esterni
+   (appare in arancione)
+
+ℹ️ Temperatura bassa 2°C - Attenzione getti CLS
+   (appare in blu)
+
+================================================================================
+SEZIONE IDONEITÀ LAVORI (Pannelli Espandibili)
+================================================================================
+
+🔨 Idoneità per Tipo di Lavoro
+
+▼ SCAVI
+  Score Specifico: 70.0/100
+  ✅ SCAVI: Condizioni buone, procedere normalmente
+  Parametri critici: precipitazione, vento
+
+▼ OPERE_IN_QUOTA
+  Score Specifico: 80.0/100
+  ✅ OPERE_IN_QUOTA: Condizioni ottime, nessuna limitazione
+  Parametri critici: vento, precipitazione, visibilita
+
+▼ GETTO_CLS
+  Score Specifico: 85.0/100
+  ✅ GETTO_CLS: Condizioni ottime, nessuna limitazione
+  Parametri critici: precipitazione, temperatura
+
+▶ FACCIATE (click per espandere)
+▶ COPERTURE
+▶ INTERNI
+▶ MOVIMENTI_TERRA
+▶ GRU_SOLLEVAMENTI
+
+================================================================================
+BOTTONI DOWNLOAD
+================================================================================
+
+💾 Esporta Report
+
+┌─────────────────────┐  ┌─────────────────────┐
+│ 📄 Scarica          │  │ 📊 Scarica          │
+│    Report TXT       │  │    Dati CSV         │
+└─────────────────────┘  └─────────────────────┘
+      ↓                          ↓
+  report_cantiere_     dati_meteo_20241118.csv
+  20241118.txt
+
+================================================================================
+COLORI E ICONE
+================================================================================
+
+✅ = Verde = OK, Tutto bene
+⚠️ = Giallo/Arancione = Attenzione
+❌ = Rosso = Problema, Non fare
+🚫 = Rosso scuro = VIETATO
+
+Categorie Sicurezza:
+├─ OTTIMO (80-100)        → 🟢 Verde intenso
+├─ BUONO (65-79)          → 🟢 Verde chiaro
+├─ ACCETTABILE (50-64)    → 🟡 Giallo
+├─ LIMITATO (35-49)       → 🟠 Arancione
+├─ SCONSIGLIATO (20-34)   → 🔴 Rosso
+└─ VIETATO (0-19)         → ⚫ Rosso scuro
+
+================================================================================
+RESPONSIVE (Si Adatta allo Schermo)
+================================================================================
+
+Desktop:     Layout a 2 colonne (barra laterale + contenuto)
+Tablet:      Layout adattivo
+Smartphone:  Barra laterale pieghevole, contenuto a schermo intero
+
+================================================================================
+
+🎨 TUTTO QUESTO con ZERO CONFIGURAZIONE!
+
+Doppio click su start.bat e hai questa interfaccia professionale! 🚀
+
+================================================================================
